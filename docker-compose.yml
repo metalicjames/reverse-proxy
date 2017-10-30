@@ -3,7 +3,7 @@ version: '3'
 services:
   traefik:
     build: .
-    # command: --logLevel=DEBUG
+    command: --logLevel=DEBUG --docker --docker.swarmmode  --docker.domain=traefik, --docker.watch, --web
     ports:
       - "80:80"
       - "443:443"
